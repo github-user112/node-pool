@@ -11,8 +11,5 @@ const jd = sequelize.define('jd', {
     type:Sequelize.STRING
   }
 });
-jd.sync({force: false}).then(() => {
-   // Table created
-   return jd.create({});
- });
+jd.sync()
 module.exports = jd

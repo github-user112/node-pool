@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 var Jd = require('../sequelize/modal/jd_list');
 // var Pool = require('../Pool/pool');
 async function parseJd () {
-  const browser = await puppeteer.launch({slowMo: 250})
+  const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']})
   const page = await browser.newPage()
   await page.goto('http://list.jd.com/list.html?cat=9987,653,655')
   await page.waitFor(2000)
