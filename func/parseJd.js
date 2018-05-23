@@ -11,6 +11,7 @@ async function parseJd () {
     return list.map(el => {
       console.dir(el)
       return {
+        sku:el.querySelector('.gl-i-wrap').getAttribute('data-sku'),
         price: el.querySelector('.J_price i').innerText,
         name: el.querySelector('.promo-words').innerText,
         sales: el.querySelector('.comment').innerText

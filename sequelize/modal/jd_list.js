@@ -4,6 +4,9 @@ const jd = sequelize.define('jd', {
   name: {
     type: Sequelize.STRING
   },
+  sku:{
+    type: Sequelize.STRING
+  },
   price: {
     type: Sequelize.FLOAT
   },
